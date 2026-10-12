@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Master Revision Program - JEE Main 2027</title>
     
-    <!-- Professional Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+Devanagari:wght@400;500;600;700;800;900&family=Tiro+Devanagari+Hindi:ital@0;1&display=swap" rel="stylesheet">
@@ -18,25 +17,18 @@
             --brand-primary: #38bdf8;
             --brand-secondary: #f59e0b;
             --brand-accent: #10b981;
-            --brand-urgent: #ef4444;
             --whatsapp-color: #25D366;
             --text-heading: #f8fafc;
             --text-body: #cbd5e1;
             --text-muted: #94a3b8;
             --border-subtle: rgba(255, 255, 255, 0.1);
             --border-highlight: rgba(56, 189, 248, 0.3);
-            
-            /* Professional Font Stacks */
             --font-eng: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
             --font-hindi-body: 'Noto Sans Devanagari', 'Inter', sans-serif;
             --font-hindi-accent: 'Tiro Devanagari Hindi', serif;
         }
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
 
         body {
             background-color: var(--bg-canvas);
@@ -65,10 +57,7 @@
         .announcement-container::before {
             content: '';
             position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
+            top: 0; left: 0; right: 0; height: 4px;
             background: linear-gradient(90deg, var(--brand-primary), var(--brand-secondary), var(--brand-accent));
         }
 
@@ -107,9 +96,7 @@
             border-radius: 20px;
         }
 
-        .content-body {
-            padding: 36px 32px;
-        }
+        .content-body { padding: 36px 32px; }
 
         .main-heading {
             font-size: 2.2rem;
@@ -117,14 +104,12 @@
             color: var(--text-heading);
             line-height: 1.25;
             margin-bottom: 12px;
-            font-family: var(--font-hindi-body);
         }
 
         .sub-heading {
             font-size: 1.15rem;
             color: var(--text-muted);
             margin-bottom: 32px;
-            font-weight: 400;
         }
 
         .hindi-highlight {
@@ -148,31 +133,11 @@
             display: flex;
             align-items: flex-start;
             gap: 16px;
-            transition: transform 0.2s ease, border-color 0.2s ease;
         }
 
-        .feature-item:hover {
-            border-color: var(--border-highlight);
-            transform: translateY(-2px);
-        }
-
-        .feature-icon {
-            font-size: 1.5rem;
-            line-height: 1;
-            margin-top: 2px;
-        }
-
-        .feature-text h4 {
-            color: var(--text-heading);
-            font-size: 1.05rem;
-            font-weight: 700;
-            margin-bottom: 4px;
-        }
-
-        .feature-text p {
-            color: var(--text-muted);
-            font-size: 0.925rem;
-        }
+        .feature-icon { font-size: 1.5rem; line-height: 1; margin-top: 2px; }
+        .feature-text h4 { color: var(--text-heading); font-size: 1.05rem; font-weight: 700; margin-bottom: 4px; }
+        .feature-text p { color: var(--text-muted); font-size: 0.925rem; }
 
         .deadline-card {
             background: linear-gradient(135deg, rgba(239, 68, 68, 0.1), rgba(245, 158, 11, 0.05));
@@ -181,42 +146,14 @@
             padding: 20px;
             text-align: center;
             margin-bottom: 32px;
-            box-shadow: 0 4px 20px rgba(239, 68, 68, 0.15);
         }
 
-        .deadline-title {
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            color: #fca5a5;
-            font-weight: 700;
-            margin-bottom: 4px;
-        }
+        .deadline-title { font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; color: #fca5a5; font-weight: 700; margin-bottom: 4px; }
+        .deadline-date { font-family: var(--font-eng); font-size: 1.6rem; font-weight: 900; color: #ffffff; }
+        .deadline-date span { color: var(--brand-secondary); }
+        .deadline-subtext { font-size: 0.95rem; color: #fecaca; margin-top: 4px; font-weight: 600; }
 
-        .deadline-date {
-            font-family: var(--font-eng);
-            font-size: 1.6rem;
-            font-weight: 900;
-            color: #ffffff;
-            line-height: 1.2;
-        }
-
-        .deadline-date span {
-            color: var(--brand-secondary);
-        }
-
-        .deadline-subtext {
-            font-size: 0.95rem;
-            color: #fecaca;
-            margin-top: 4px;
-            font-weight: 600;
-        }
-
-        /* WhatsApp Call to Action Section */
-        .cta-section {
-            text-align: center;
-            padding-top: 8px;
-        }
+        .cta-section { text-align: center; padding-top: 8px; }
 
         .whatsapp-btn {
             display: inline-flex;
@@ -232,60 +169,36 @@
             border-radius: 50px;
             text-decoration: none;
             box-shadow: 0 8px 25px rgba(37, 211, 102, 0.35);
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: all 0.3s ease;
             margin-top: 12px;
             cursor: pointer;
         }
 
-        .whatsapp-btn:hover {
-            background-color: #1eb956;
-            transform: translateY(-3px) scale(1.02);
-            box-shadow: 0 12px 30px rgba(37, 211, 102, 0.5);
-            color: #000000;
-        }
-
-        .whatsapp-btn svg {
-            width: 26px;
-            height: 26px;
-            fill: currentColor;
-        }
+        .whatsapp-btn:hover { background-color: #1eb956; transform: translateY(-3px); color: #000000; }
+        .whatsapp-btn svg { width: 26px; height: 26px; fill: currentColor; }
 
         @media (max-width: 600px) {
-            body {
-                padding: 12px;
-            }
-            .content-body {
-                padding: 24px 20px;
-            }
-            .main-heading {
-                font-size: 1.75rem;
-            }
-            .header-banner {
-                padding: 18px 20px;
-            }
+            body { padding: 12px; }
+            .content-body { padding: 24px 20px; }
+            .main-heading { font-size: 1.75rem; }
         }
     </style>
 </head>
 <body>
 
     <div class="announcement-container">
-        
-        <!-- Header Banner -->
         <div class="header-banner">
             <span class="institute-badge">Kalp Coaching Institute</span>
             <span class="batch-tag">JEE MAIN 2027</span>
         </div>
 
-        <!-- Main Content -->
         <div class="content-body">
             <h1 class="main-heading">Master Revision Program</h1>
             <p class="sub-heading">
-                JEE Main 2027 aspirants ke liye vishesh taiyari. Ab <span class="hindi-highlight">mazboot ne नींव</span> aur smart revision ke sath karein safalta ki shuruaat.
+                JEE Main 2027 aspirants ke liye vishesh taiyari. Ab <span class="hindi-highlight">mazboot neev</span> aur smart revision ke sath karein safalta ki shuruaat.
             </p>
 
-            <!-- Features Grid -->
             <div class="features-grid">
-                
                 <div class="feature-item">
                     <div class="feature-icon">🎯</div>
                     <div class="feature-text">
@@ -298,7 +211,7 @@
                     <div class="feature-icon">📚</div>
                     <div class="feature-text">
                         <h4>Daily Exam-Level Practice</h4>
-                        <p>Rojana चुनिंदा questions aur test series jo exam ke pattern par adharit hain.</p>
+                        <p>Rojana chuninda questions aur test series jo exam ke pattern par adharit hain.</p>
                     </div>
                 </div>
 
@@ -309,17 +222,24 @@
                         <p>Regular follow-ups aur reminders taaki aapka study schedule hamesha track par rahe.</p>
                     </div>
                 </div>
-
             </div>
 
-            <!-- Deadline Banner -->
             <div class="deadline-card">
                 <div class="deadline-title">Registration Deadline</div>
                 <div class="deadline-date">15 <span>October</span> 2026</div>
                 <div class="deadline-subtext">Seats limited hain, aaj hi apna sthan nishchit karein!</div>
             </div>
 
-            <!-- WhatsApp Join CTA -->
             <div class="cta-section">
                 <a href="https://chat.whatsapp.com/GuQKlQjhCs6LdeCXoQ5Q7w?s=cl&p=a&mlu=4&ilr=4" class="whatsapp-btn" target="_blank" rel="noopener noreferrer">
-                    <svg viewBox="0 0 24 24
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12.031 6.172c-3.183 0-5.767 2.584-5.767 5.767 0 1.015.265 1.969.727 2.793l-.775 2.83 2.902-.762c.791.432 1.714.685 2.713.685 3.183 0 5.768-2.584 5.768-5.768s-2.585-5.765-5.768-5.765zm3.364 8.225c-.146.411-.841.782-1.168.831-.316.049-.714.072-1.152-.07-2.673-1.077-4.417-3.791-4.551-3.971-.133-.18-1.082-1.442-1.082-2.75 0-1.308.683-1.95 1.016-2.213.333-.263.725-.329.967-.329.243 0 .485.004.696.014.223.01.523-.085.818.614.296.699 1.012 2.473 1.101 2.653.088.18.147.39.029.63-.118.24-.177.39-.355.6-.177.21-.371.469-.531.63-.177.177-.361.37-.155.727.206.357.915 1.512 1.964 2.449 1.35 1.2 2.486 1.572 2.843 1.749.357.177.566.148.777-.089.211-.237.904-1.051 1.145-1.411.241-.36.482-.3.815-.177.333.123 2.113 1.001 2.476 1.181.363.18.605.27.693.42.088.15.088.868-.258 1.838z"/>
+                    </svg>
+                    Join WhatsApp Group
+                </a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
