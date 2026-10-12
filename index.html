@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Master Revision Program - JEE Main 2027</title>
     
+    <!-- Professional Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+Devanagari:wght@400;500;600;700;800;900&family=Tiro+Devanagari+Hindi:ital@0;1&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+Devanagari:wght@400;500;600;700;800&family=Tiro+Devanagari+Hindi:ital@0;1&display=swap" rel="stylesheet">
+    
     <style>
         :root {
             --bg-canvas: #090d16;
@@ -17,108 +18,166 @@
             --brand-primary: #38bdf8;
             --brand-secondary: #f59e0b;
             --brand-accent: #10b981;
+            --brand-urgent: #ef4444;
             --whatsapp-color: #25D366;
             --text-heading: #f8fafc;
             --text-body: #cbd5e1;
             --text-muted: #94a3b8;
             --border-subtle: rgba(255, 255, 255, 0.1);
             --border-highlight: rgba(56, 189, 248, 0.3);
+            
+            /* Professional Font Stacks */
             --font-eng: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
             --font-hindi-body: 'Noto Sans Devanagari', 'Inter', sans-serif;
-            --font-hindi-accent: 'Tiro Devanagari Hindi', serif;
+            --font-hindi-serif: 'Tiro Devanagari Hindi', 'Noto Sans Devanagari', serif;
         }
 
-        * { box-sizing: border-box; margin: 0; padding: 0; }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
         body {
+            font-family: var(--font-hindi-body);
             background-color: var(--bg-canvas);
             color: var(--text-body);
-            font-family: var(--font-hindi-body);
-            line-height: 1.6;
-            min-height: 100vh;
             display: flex;
-            flex-direction: column;
-            align-items: center;
             justify-content: center;
-            padding: 24px;
+            align-items: center;
+            min-height: 100vh;
+            padding: 24px 16px;
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
         }
 
-        .announcement-container {
+        .container {
             width: 100%;
-            max-width: 680px;
+            max-width: 820px;
             background: var(--card-surface);
-            border: 1px solid var(--border-subtle);
             border-radius: 20px;
+            border: 1px solid var(--border-subtle);
             box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
             overflow: hidden;
             position: relative;
         }
 
-        .announcement-container::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; right: 0; height: 4px;
-            background: linear-gradient(90deg, var(--brand-primary), var(--brand-secondary), var(--brand-accent));
-        }
-
         .header-banner {
-            background: linear-gradient(135deg, rgba(19, 27, 46, 0.95), rgba(28, 39, 66, 0.95));
-            padding: 24px 32px;
-            border-bottom: 1px solid var(--border-subtle);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 12px;
+            background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 60%, #312e81 100%);
+            padding: 42px 32px 36px;
+            text-align: center;
+            position: relative;
+            border-bottom: 2px solid var(--brand-secondary);
         }
 
-        .institute-badge {
+        .institute-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(245, 158, 11, 0.15);
+            border: 1px solid var(--brand-secondary);
+            color: var(--brand-secondary);
             font-family: var(--font-eng);
-            font-size: 0.85rem;
             font-weight: 700;
+            padding: 6px 18px;
+            border-radius: 50px;
+            font-size: 0.82rem;
             letter-spacing: 1.5px;
             text-transform: uppercase;
-            color: var(--brand-primary);
-            background: rgba(56, 189, 248, 0.1);
-            padding: 6px 14px;
-            border-radius: 20px;
-            border: 1px solid rgba(56, 189, 248, 0.2);
+            margin-bottom: 16px;
         }
 
-        .batch-tag {
+        .header-banner h1 {
             font-family: var(--font-eng);
-            font-size: 0.85rem;
-            font-weight: 700;
-            letter-spacing: 1px;
-            color: var(--bg-canvas);
-            background: var(--brand-secondary);
-            padding: 6px 14px;
-            border-radius: 20px;
-        }
-
-        .content-body { padding: 36px 32px; }
-
-        .main-heading {
-            font-size: 2.2rem;
-            font-weight: 800;
+            font-size: 2.3rem;
+            font-weight: 900;
             color: var(--text-heading);
-            line-height: 1.25;
-            margin-bottom: 12px;
+            letter-spacing: -0.5px;
+            text-transform: uppercase;
+            line-height: 1.2;
+            margin-bottom: 8px;
         }
 
-        .sub-heading {
+        .sub-tagline {
+            font-family: var(--font-eng);
+            font-size: 1.05rem;
+            color: var(--brand-primary);
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        .content-body {
+            padding: 36px;
+        }
+
+        .greeting-block {
+            background: rgba(255, 255, 255, 0.02);
+            border-left: 4px solid var(--brand-primary);
+            padding: 20px 24px;
+            border-radius: 0 12px 12px 0;
+            margin-bottom: 28px;
+        }
+
+        .salutation {
+            font-family: var(--font-eng);
             font-size: 1.15rem;
-            color: var(--text-muted);
+            font-weight: 700;
+            color: var(--brand-primary);
+            margin-bottom: 8px;
+        }
+
+        .problem-statement {
+            font-size: 1.02rem;
+            color: var(--text-body);
+        }
+
+        .problem-statement strong {
+            color: #ffffff;
+            font-weight: 600;
+        }
+
+        /* Callout Box */
+        .alert-callout {
+            background: linear-gradient(90deg, rgba(239, 68, 68, 0.12) 0%, rgba(245, 158, 11, 0.08) 100%);
+            border: 1px solid rgba(239, 68, 68, 0.3);
+            border-radius: 12px;
+            padding: 18px 22px;
             margin-bottom: 32px;
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
         }
 
-        .hindi-highlight {
-            font-family: var(--font-hindi-accent);
-            color: var(--brand-secondary);
-            font-style: italic;
+        .alert-icon {
+            font-size: 1.4rem;
+            line-height: 1;
         }
 
-        .features-grid {
+        .alert-text {
+            font-size: 0.98rem;
+            color: #fecaca;
+        }
+
+        .alert-text strong {
+            color: #ffffff;
+            font-weight: 700;
+        }
+
+        /* Key Features Grid */
+        .section-header {
+            font-family: var(--font-hindi-body);
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--text-heading);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border-bottom: 1px solid var(--border-subtle);
+            padding-bottom: 10px;
+        }
+
+        .features-container {
             display: grid;
             grid-template-columns: 1fr;
             gap: 16px;
@@ -128,32 +187,126 @@
         .feature-item {
             background: var(--card-surface-elevated);
             border: 1px solid var(--border-subtle);
-            border-radius: 12px;
-            padding: 16px 20px;
+            border-radius: 14px;
+            padding: 20px 24px;
             display: flex;
-            align-items: flex-start;
-            gap: 16px;
+            gap: 18px;
+            transition: all 0.25s ease;
         }
 
-        .feature-icon { font-size: 1.5rem; line-height: 1; margin-top: 2px; }
-        .feature-text h4 { color: var(--text-heading); font-size: 1.05rem; font-weight: 700; margin-bottom: 4px; }
-        .feature-text p { color: var(--text-muted); font-size: 0.925rem; }
+        .feature-item:hover {
+            border-color: var(--border-highlight);
+            transform: translateY(-2px);
+        }
 
+        .feature-number {
+            font-family: var(--font-eng);
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: var(--brand-secondary);
+            background: rgba(245, 158, 11, 0.1);
+            width: 42px;
+            height: 42px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .feature-details h3 {
+            font-family: var(--font-eng);
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--text-heading);
+            margin-bottom: 4px;
+        }
+
+        .feature-details p {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+        }
+
+        /* Motivational Quote Box */
+        .quote-box {
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.08) 0%, rgba(56, 189, 248, 0.08) 100%);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            border-radius: 14px;
+            padding: 24px;
+            text-align: center;
+            margin-bottom: 28px;
+        }
+
+        .quote-box p {
+            font-family: var(--font-hindi-serif);
+            font-size: 1.12rem;
+            color: #e2e8f0;
+            font-style: italic;
+            line-height: 1.8;
+        }
+
+        .quote-box .highlight {
+            font-family: var(--font-hindi-body);
+            font-style: normal;
+            font-weight: 700;
+            color: var(--brand-accent);
+        }
+
+        /* Registration Deadline Box */
         .deadline-card {
-            background: linear-gradient(135deg, rgba(239, 68, 68, 0.1), rgba(245, 158, 11, 0.05));
-            border: 1px solid rgba(239, 68, 68, 0.3);
+            background: linear-gradient(90deg, rgba(239, 68, 68, 0.2) 0%, rgba(245, 158, 11, 0.15) 100%);
+            border: 2px dashed var(--brand-urgent);
             border-radius: 14px;
             padding: 20px;
             text-align: center;
-            margin-bottom: 32px;
+            margin-bottom: 28px;
+            box-shadow: 0 4px 20px rgba(239, 68, 68, 0.15);
         }
 
-        .deadline-title { font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; color: #fca5a5; font-weight: 700; margin-bottom: 4px; }
-        .deadline-date { font-family: var(--font-eng); font-size: 1.6rem; font-weight: 900; color: #ffffff; }
-        .deadline-date span { color: var(--brand-secondary); }
-        .deadline-subtext { font-size: 0.95rem; color: #fecaca; margin-top: 4px; font-weight: 600; }
+        .deadline-title {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #fca5a5;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
 
-        .cta-section { text-align: center; padding-top: 8px; }
+        .deadline-date {
+            font-family: var(--font-eng);
+            font-size: 1.6rem;
+            font-weight: 900;
+            color: #ffffff;
+            line-height: 1.2;
+        }
+
+        .deadline-date span {
+            color: var(--brand-secondary);
+        }
+
+        .deadline-subtext {
+            font-size: 0.95rem;
+            color: #fecaca;
+            margin-top: 4px;
+            font-weight: 600;
+        }
+
+        /* WhatsApp Call to Action Section */
+        .whatsapp-cta-card {
+            background: linear-gradient(135deg, rgba(37, 211, 102, 0.15) 0%, rgba(18, 140, 126, 0.1) 100%);
+            border: 1px solid rgba(37, 211, 102, 0.4);
+            border-radius: 16px;
+            padding: 28px 24px;
+            text-align: center;
+            margin-bottom: 28px;
+        }
+
+        .whatsapp-cta-title {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 8px;
+        }
 
         .whatsapp-btn {
             display: inline-flex;
@@ -169,77 +322,4 @@
             border-radius: 50px;
             text-decoration: none;
             box-shadow: 0 8px 25px rgba(37, 211, 102, 0.35);
-            transition: all 0.3s ease;
-            margin-top: 12px;
-            cursor: pointer;
-        }
-
-        .whatsapp-btn:hover { background-color: #1eb956; transform: translateY(-3px); color: #000000; }
-        .whatsapp-btn svg { width: 26px; height: 26px; fill: currentColor; }
-
-        @media (max-width: 600px) {
-            body { padding: 12px; }
-            .content-body { padding: 24px 20px; }
-            .main-heading { font-size: 1.75rem; }
-        }
-    </style>
-</head>
-<body>
-
-    <div class="announcement-container">
-        <div class="header-banner">
-            <span class="institute-badge">Kalp Coaching Institute</span>
-            <span class="batch-tag">JEE MAIN 2027</span>
-        </div>
-
-        <div class="content-body">
-            <h1 class="main-heading">Master Revision Program</h1>
-            <p class="sub-heading">
-                JEE Main 2027 aspirants ke liye vishesh taiyari. Ab <span class="hindi-highlight">mazboot neev</span> aur smart revision ke sath karein safalta ki shuruaat.
-            </p>
-
-            <div class="features-grid">
-                <div class="feature-item">
-                    <div class="feature-icon">🎯</div>
-                    <div class="feature-text">
-                        <h4>Expert Guidance</h4>
-                        <p>Top faculty dwara concepts ki gehrai se samajh aur shortcut problem-solving techniques.</p>
-                    </div>
-                </div>
-
-                <div class="feature-item">
-                    <div class="feature-icon">📚</div>
-                    <div class="feature-text">
-                        <h4>Daily Exam-Level Practice</h4>
-                        <p>Rojana chuninda questions aur test series jo exam ke pattern par adharit hain.</p>
-                    </div>
-                </div>
-
-                <div class="feature-item">
-                    <div class="feature-icon">⏰</div>
-                    <div class="feature-text">
-                        <h4>Accountability Reminders</h4>
-                        <p>Regular follow-ups aur reminders taaki aapka study schedule hamesha track par rahe.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="deadline-card">
-                <div class="deadline-title">Registration Deadline</div>
-                <div class="deadline-date">15 <span>October</span> 2026</div>
-                <div class="deadline-subtext">Seats limited hain, aaj hi apna sthan nishchit karein!</div>
-            </div>
-
-            <div class="cta-section">
-                <a href="https://chat.whatsapp.com/GuQKlQjhCs6LdeCXoQ5Q7w?s=cl&p=a&mlu=4&ilr=4" class="whatsapp-btn" target="_blank" rel="noopener noreferrer">
-                    <svg viewBox="0 0 24 24">
-                        <path d="M12.031 6.172c-3.183 0-5.767 2.584-5.767 5.767 0 1.015.265 1.969.727 2.793l-.775 2.83 2.902-.762c.791.432 1.714.685 2.713.685 3.183 0 5.768-2.584 5.768-5.768s-2.585-5.765-5.768-5.765zm3.364 8.225c-.146.411-.841.782-1.168.831-.316.049-.714.072-1.152-.07-2.673-1.077-4.417-3.791-4.551-3.971-.133-.18-1.082-1.442-1.082-2.75 0-1.308.683-1.95 1.016-2.213.333-.263.725-.329.967-.329.243 0 .485.004.696.014.223.01.523-.085.818.614.296.699 1.012 2.473 1.101 2.653.088.18.147.39.029.63-.118.24-.177.39-.355.6-.177.21-.371.469-.531.63-.177.177-.361.37-.155.727.206.357.915 1.512 1.964 2.449 1.35 1.2 2.486 1.572 2.843 1.749.357.177.566.148.777-.089.211-.237.904-1.051 1.145-1.411.241-.36.482-.3.815-.177.333.123 2.113 1.001 2.476 1.181.363.18.605.27.693.42.088.15.088.868-.258 1.838z"/>
-                    </svg>
-                    Join WhatsApp Group
-                </a>
-            </div>
-        </div>
-    </div>
-
-</body>
-</html>
+            transition:
