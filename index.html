@@ -26,7 +26,6 @@
             --border-subtle: rgba(255, 255, 255, 0.1);
             --border-highlight: rgba(56, 189, 248, 0.3);
 
-            /* Professional Font Stacks */
             --font-eng: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
             --font-hindi-body: 'Noto Sans Devanagari', 'Inter', sans-serif;
             --font-hindi-serif: 'Tiro Devanagari Hindi', 'Noto Sans Devanagari', serif;
@@ -136,7 +135,6 @@
             font-weight: 600;
         }
 
-        /* Callout Box */
         .alert-callout {
             background: linear-gradient(90deg, rgba(239, 68, 68, 0.12) 0%, rgba(245, 158, 11, 0.08) 100%);
             border: 1px solid rgba(239, 68, 68, 0.3);
@@ -163,7 +161,6 @@
             font-weight: 700;
         }
 
-        /* Key Features Grid */
         .section-header {
             font-family: var(--font-hindi-body);
             font-size: 1.25rem;
@@ -227,7 +224,6 @@
             color: var(--text-muted);
         }
 
-        /* Motivational Quote Box */
         .quote-box {
             background: linear-gradient(135deg, rgba(16, 185, 129, 0.08) 0%, rgba(56, 189, 248, 0.08) 100%);
             border: 1px solid rgba(16, 185, 129, 0.3);
@@ -252,7 +248,6 @@
             color: var(--brand-accent);
         }
 
-        /* Registration Deadline Box */
         .deadline-card {
             background: linear-gradient(90deg, rgba(239, 68, 68, 0.2) 0%, rgba(245, 158, 11, 0.15) 100%);
             border: 2px dashed var(--brand-urgent);
@@ -291,7 +286,6 @@
             font-weight: 600;
         }
 
-        /* WhatsApp Call to Action Section */
         .whatsapp-cta-card {
             background: linear-gradient(135deg, rgba(37, 211, 102, 0.15) 0%, rgba(18, 140, 126, 0.1) 100%);
             border: 1px solid rgba(37, 211, 102, 0.4);
@@ -349,7 +343,6 @@
             letter-spacing: 0.3px;
         }
 
-        /* Utility Bar */
         .action-bar {
             display: flex;
             justify-content: space-between;
@@ -380,7 +373,6 @@
             transform: translateY(-1px);
         }
 
-        /* Responsive Breakpoints */
         @media (max-width: 640px) {
             body {
                 padding: 12px 8px;
@@ -416,7 +408,6 @@
             }
         }
 
-        /* Print Style Overrides */
         @media print {
             body {
                 background-color: #fff;
@@ -470,17 +461,14 @@
 
     <div class="container">
 
-        <!-- Banner Header -->
         <header class="header-banner">
             <span class="institute-tag">TARGET: JEE MAIN 2027</span>
             <h1>MASTER REVISION PROGRAM</h1>
             <p class="sub-tagline">Mentorship • Revision Planning • Daily Practice</p>
         </header>
 
-        <!-- Main Content Area -->
         <main class="content-body">
 
-            <!-- Salutation & Core Question -->
             <section class="greeting-block">
                 <div class="salutation">Dear Students,</div>
                 <div class="problem-statement">
@@ -490,7 +478,6 @@
                 </div>
             </section>
 
-            <!-- Warning Highlight -->
             <div class="alert-callout">
                 <div class="alert-icon">⚠️</div>
                 <div class="alert-text">
@@ -498,14 +485,12 @@
                 </div>
             </div>
 
-            <!-- Program Introduction -->
             <div class="problem-statement" style="margin-bottom: 24px;">
                 इसलिए आपकी तैयारी को सही direction देने के लिए हम ला रहे हैं एक Special Program:
                 <br>
                 👉 <strong>Mentorship + Revision Planning + Daily Practice</strong>
             </div>
 
-            <!-- Features Grid -->
             <section>
                 <h2 class="section-header">
                     🎯 इस Program में आपको क्या मिलेगा?
@@ -540,7 +525,6 @@
                 </div>
             </section>
 
-            <!-- Motivational Callout -->
             <section class="quote-box">
                 <p>
                     "आपने अपनी <span class="highlight">80% journey complete</span> कर ली है, अब सिर्फ <span class="highlight">20% रास्ता बाकी है।</span><br>
@@ -548,12 +532,13 @@
                 </p>
             </section>
 
-            <!-- Registration Information -->
             <div class="deadline-card">
                 <div class="deadline-title">✨ आपके लिए एक खास मौका:</div>
+
                 <div class="deadline-date">
                     पहला हफ़्ता <span>(First Week)</span> बिल्कुल FREE रहेगा!
                 </div>
+
                 <div class="deadline-subtext">
                     आप इस program की value को खुद अनुभव कर सकें,
                     <br><br>
@@ -561,9 +546,11 @@
                 </div>
             </div>
 
-            <!-- WhatsApp Group Call-to-Action -->
             <section class="whatsapp-cta-card">
-                <div class="whatsapp-cta-title">📲 आज ही हमारे Dedicated Group से जुड़ें!</div>
+
+                <div class="whatsapp-cta-title">
+                    📲 आज ही हमारे Dedicated Group से जुड़ें!
+                </div>
 
                 <p style="font-size: 0.92rem; color: #94a3b8; margin-bottom: 8px;">
                     नीचे दिए गए बटन पर क्लिक करें और तुरंत WhatsApp Group जॉइन करें:
@@ -582,14 +569,12 @@
                 </a>
             </section>
 
-            <!-- Closing Statement -->
             <footer class="closing-note">
                 🏆 All the Very Best! Let's crack JEE Main 2027 together! 🏆
             </footer>
 
         </main>
 
-        <!-- Utility Bar -->
         <div class="action-bar">
             <button class="print-btn" onclick="window.print()">
                 🖨️ Print / Save PDF
